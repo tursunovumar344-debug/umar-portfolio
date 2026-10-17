@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Umar Tursunov | Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #eeeae1;
+    color: #171715;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    margin: 20px auto;
+    width: 90%;
+    padding: 15px 25px;
+    border: 1px solid #77736c;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+header a {
+    text-decoration: none;
+    color: #171715;
+}
+
+.menu {
+    border: 1px solid #77736c;
+    border-radius: 30px;
+    padding: 10px 25px;
+}
+
+.hero {
+    width: 90%;
+    margin: 45px auto 0;
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-text {
+    width: 55%;
+    position: relative;
+    z-index: 2;
+}
+
+.small-title {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 70px;
+    line-height: 0.98;
+    margin-bottom: 18px;
+}
+
+.hero h2 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+}
+
+.description {
+    color: #55534f;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 430px;
+}
+
+.hero img {
+    width: 48%;
+    height: 430px;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: 0.95;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 28%);
+    mask-image: linear-gradient(to right, transparent, black 28%);
+}
+
+.info {
+    display: flex;
+    gap: 35px;
+    margin-top: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+section {
+    width: 88%;
+    margin: 45px auto;
+}
+
+.section-number {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.about-left {
+    width: 55%;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.about p {
+    color: #55534f;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+.about-right {
+    width: 40%;
+    border-left: 1px solid #d0ccc3;
+    padding-left: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 22px;
+}
+
+.about-right p {
+    color: #45433f;
+}
+
+.projects-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projects-title a {
+    text-decoration: none;
+    color: #55534f;
+    font-size: 13px;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 0;
+    border-top: 1px solid #d4d0c7;
+    text-decoration: none;
+    color: #171715;
+    transition: 0.3s;
+}
+
+.project:hover {
+    padding-left: 10px;
+    background: #e6e1d7;
+}
+
+.project-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 12px;
+    background: #d8d2c6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 27px;
+    flex-shrink: 0;
+}
+
+.project-text {
+    flex: 1;
+}
+
+.project-text h3 {
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.project-text p {
+    color: #66615a;
+    font-size: 13px;
+}
+
+.project-arrow {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills span {
+    border: 1px solid #aaa49a;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 13px;
+}
+
+.contact {
+    width: 90%;
+    margin: 50px auto 20px;
+    padding: 35px;
+    background: #191917;
+    color: #f4f0e8;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.contact p {
+    color: #bdb9b0;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.contact a {
+    background: #eeeae1;
+    color: #171715;
+    padding: 15px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+footer {
+    width: 88%;
+    margin: 20px auto;
+    padding: 20px 0;
+    border-top: 1px solid #d4d0c7;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #171715;
+}
+
+@media (max-width: 700px) {
+    header {
+        width: 92%;
+        padding: 12px 18px;
+    }
+
+    .hero {
+        width: 90%;
+        min-height: 560px;
+        align-items: flex-start;
+        margin-top: 35px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .hero h2 {
+        font-size: 15px;
+    }
+
+    .description {
+        font-size: 15px;
+        max-width: 100%;
+    }
+
+    .hero img {
+        width: 100%;
+        height: 300px;
+        bottom: 0;
+        opacity: 0.65;
+        -webkit-mask-image: linear-gradient(to bottom, transparent, black 35%);
+        mask-image: linear-gradient(to bottom, transparent, black 35%);
+    }
+
+    .info {
+        flex-wrap: wrap;
+        gap: 15px;
+        font-size: 10px;
+    }
+
+    section {
+        width: 88%;
+        margin: 40px auto;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-left,
+    .about-right {
+        width: 100%;
+    }
+
+    .about-right {
+        border-left: none;
+        border-top: 1px solid #d0ccc3;
+        padding: 25px 0 0;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .projects-title {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .projects-title a {
+        margin-top: 8px;
+    }
+
+    .project {
+        gap: 12px;
+    }
+
+    .project-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 23px;
+    }
+
+    .project-text h3 {
+        font-size: 14px;
+    }
+
+    .project-text p {
+        font-size: 12px;
+    }
+
+    .project-arrow {
+        font-size: 20px;
+        margin-right: 0;
+    }
+
+    .skills {
+        gap: 8px;
+    }
+
+    .skills span {
+        padding: 9px 14px;
+    }
+
+    .contact {
+        width: 90%;
+        padding: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact a {
+        white-space: normal;
+    }
+
+    footer {
+        width: 88%;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">U7</div>
+    <a class="menu" href="#aloqa">Bog‘lanish ↗</a>
+</header>
+
+<div class="hero">
+
+    <div class="hero-text">
+        <p class="small-title">UMAR — FUTURE FULL STACK DEVELOPER</p>
+
+        <h1>UMAR<br>TURSUNOV</h1>
+
+        <h2>BO‘LAJAK FULL STACK DASTURCHI</h2>
+
+        <p class="description">
+            Men Umar Tursunovman. Hozirda veb-dasturlashni
+            o‘rganyapman va o‘z loyihalarimni yaratmoqdaman.
+            Maqsadim — professional dasturchi bo‘lish
+            va foydali raqamli mahsulotlar yaratish.
+        </p>
+
+        <div class="info">
+            <span>📍 O‘ZBEKISTON</span>
+            <span>〈〉 HTML → CSS → JAVASCRIPT</span>
+        </div>
+    </div>
+
+    <img src="rasm.png" alt="Portfolio uchun portret">
+
+</div>
+
+<section>
+    <p class="section-number">01 — MEN HAQIMDA</p>
+
+    <div class="about">
+
+        <div class="about-left">
+            <h2>O‘rganaman. Yarataman.<br>Rivojlanaman.</h2>
+
+            <p>
+                Men dasturlashni noldan o‘rganyapman.
+                Yangi bilimlarimni amaliyotda sinab ko‘ryapman.
+                Maqsadim — zamonaviy saytlar, ilovalar va
+                odamlarga foyda keltiradigan raqamli loyihalar yaratish.
+            </p>
+        </div>
+
+        <div class="about-right">
+            <p>🎓 &nbsp; Doimiy o‘rganish</p>
+            <p>💻 &nbsp; Yangi texnologiyalar</p>
+            <p>🎯 &nbsp; Katta loyihalar</p>
+            <p>♡ &nbsp; Foydali mahsulotlar</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="loyihalar">
+
+    <p class="section-number">02 — MENING ISHLARIM</p>
+
+    <div class="projects-title">
+        <h2>Tanlangan loyihalar</h2>
+        <a href="#loyihalar">Loyihalarim ↓</a>
+    </div>
+
+    <a class="project"
+       href="https://tursunovumar344-debug.github.io/somsaxona/"
+       target="_blank">
+
+        <div class="project-icon">🥟</div>
+
+        <div class="project-text">
+            <h3>Abdurazzoq Somsa</h3>
+            <p>Savdo va hisob-kitob loyihasi</p>
+        </div>
+
+        <span class="project-arrow">↗</span>
+    </a>
+
+    <a class="project"
+       href="https://tursunovumar344-debug.github.io/Ilmix/"
+       target="_blank">
+
+        <div class="project-icon">📚</div>
+
+        <div class="project-text">
+            <h3>Ilmix</h3>
+            <p>Ta’lim va bilim olish loyihasi</p>
+        </div>
+
+        <span class="project-arrow">↗</span>
+    </a>
+
+    <a class="project"
+       href="https://tursunovumar344-debug.github.io/-TarjimaPro/"
+       target="_blank">
+
+        <div class="project-icon">🌐</div>
+
+        <div class="project-text">
+            <h3>TarjimaPro</h3>
+            <p>Inglizcha va o‘zbekcha tarjimon</p>
+        </div>
+
+        <span class="project-arrow">↗</span>
+    </a>
+
+</section>
+
+<section>
+
+    <p class="section-number">03 — TEXNOLOGIYALAR</p>
+
+    <h2>O‘rganayotganlarim</h2>
+
+    <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>GitHub</span>
+        <span>Python</span>
+        <span>Web Development</span>
+    </div>
+
+</section>
+
+<div class="contact" id="aloqa">
+
+    <div>
+        <p class="section-number">04 — ALOQA</p>
+
+        <h2>Birgalikda nimadir<br>yaratamizmi?</h2>
+
+        <p>
+            Yangi loyihalar, g‘oyalar va hamkorlik haqida
+            suhbatlashish uchun men bilan bog‘laning.
+        </p>
+    </div>
+
+    <a href="https://t.me/Umarbey_447" target="_blank">
+        ✈ Telegram orqali bog‘lanish ↗
+    </a>
+
+</div>
+
+<footer>
+    <p>© 2026 UMAR TURSUNOV</p>
+
+    <a href="#top" onclick="window.scrollTo(0,0); return false;">
+        YUQORIGA ↑
+    </a>
+</footer>
+
+</body>
+</html>
